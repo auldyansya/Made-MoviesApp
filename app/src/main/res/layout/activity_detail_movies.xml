@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="RtlHardcoded">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:behavior_overlapTop="78dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/background"
+                android:layout_width="411dp"
+                android:layout_height="235dp"
+                android:src="@color/teal_200"
+                android:contentDescription="@string/background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/poster"
+                android:layout_width="157dp"
+                android:layout_height="243dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="176dp"
+                android:src="@color/teal_200"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.032"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/background"
+                android:contentDescription="@string/poster" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="209dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="start"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.571"
+                app:layout_constraintStart_toEndOf="@+id/poster"
+                app:layout_constraintTop_toBottomOf="@+id/background"
+                tools:text="@string/title" />
+
+            <TextView
+                android:id="@+id/release"
+                android:layout_width="100dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="48dp"
+                android:gravity="start"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.146"
+                app:layout_constraintStart_toEndOf="@+id/poster"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                tools:text="@string/terbit" />
+
+
+            <TextView
+                android:id="@+id/text_userscore"
+                android:layout_width="75dp"
+                android:layout_height="21dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="40dp"
+                android:gravity="center"
+                android:text="@string/user_score"
+                android:textColor="@color/teal_700"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/overview"
+                app:layout_constraintTop_toBottomOf="@+id/poster" />
+
+            <TextView
+                android:id="@+id/text_deskripsi2"
+                android:layout_width="130dp"
+                android:layout_height="21dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="@string/deskripsi"
+                android:textColor="@color/teal_700"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/overview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.185"
+                app:layout_constraintStart_toEndOf="@+id/poster"
+                app:layout_constraintTop_toBottomOf="@+id/original_title" />
+
+            <TextView
+                android:id="@+id/overview"
+                android:layout_width="207dp"
+                android:layout_height="190dp"
+                android:layout_marginBottom="64dp"
+                android:gravity="start"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.946"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="@string/deskripsi" />
+
+            <TextView
+                android:id="@+id/original_title"
+                android:layout_width="159dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/ori_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.183"
+                app:layout_constraintStart_toEndOf="@+id/poster"
+                app:layout_constraintTop_toBottomOf="@+id/release" />
+
+            <ImageView
+                android:id="@+id/circletext"
+                android:layout_width="53dp"
+                android:layout_height="62dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+
+                app:layout_constraintEnd_toStartOf="@+id/text_userscore"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/poster"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/average"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="@string/average"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/circletext"
+                app:layout_constraintEnd_toEndOf="@+id/circletext"
+                app:layout_constraintStart_toStartOf="@+id/circletext"
+                app:layout_constraintTop_toTopOf="@+id/circletext" />
+
+            <TextView
+                android:id="@+id/popularity"
+                android:layout_width="71dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/popularity2"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_userscore" />
+
+            <TextView
+                android:id="@+id/popularity2"
+                android:layout_width="92dp"
+                android:layout_height="17dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/popularity"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toStartOf="@+id/overview"
+                app:layout_constraintStart_toEndOf="@+id/popularity"
+                app:layout_constraintTop_toBottomOf="@+id/text_userscore" />
+
+            <TextView
+                android:id="@+id/language"
+                android:layout_width="88dp"
+                android:layout_height="20dp"
+                android:text="@string/language"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toTopOf="@+id/original_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/release"
+                app:layout_constraintTop_toBottomOf="@+id/title" />
+
+            <TextView
+                android:id="@+id/count"
+                android:layout_width="93dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/count"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.011"
+                app:layout_constraintStart_toEndOf="@+id/count2"
+                app:layout_constraintTop_toBottomOf="@+id/popularity" />
+
+            <TextView
+                android:id="@+id/count2"
+                android:layout_width="71dp"
+                android:layout_height="14dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/count2"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toStartOf="@+id/overview"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/popularity" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fab_margin"
+                android:contentDescription="@string/menu_favorite"
+                app:layout_anchorGravity="bottom|end"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.3"
+                app:srcCompat="@android:drawable/ic_dialog_email"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
