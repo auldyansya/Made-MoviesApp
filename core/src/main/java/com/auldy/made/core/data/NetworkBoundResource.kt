@@ -3,7 +3,7 @@ package com.auldy.made.core.data
 import com.auldy.made.core.data.source.remote.network.ApiResponse
 import kotlinx.coroutines.flow.*
 
-abstract class NetworkBoundResource<ResultType, RequestType>{
+abstract class NetworkBoundResource<ResultType, RequestType> {
 
     private var result: Flow<Resource<ResultType>> = flow {
         emit(Resource.Loading())
